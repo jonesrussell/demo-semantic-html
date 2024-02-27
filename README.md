@@ -8,7 +8,7 @@ This project demonstrates the use of semantic HTML in web development. It's a si
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/demo-semantic-html.git
+   git clone https://github.com/jonesrussell/demo-semantic-html.git
    ```
 2. Navigate to the project directory:
    ```
