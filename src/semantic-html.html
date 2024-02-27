@@ -1,31 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Semantic HTML Demo</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .menu {
+            background-color: #f8f9fa;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu div {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .hero {
+            background-image: url('https://source.unsplash.com/random');
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>Welcome to My Web Page</h1>
+        <nav class="menu" aria-label="Main navigation">
+            <img src="https://source.unsplash.com/random/50x50" alt="Logo" class="logo" aria-label="Website Logo">
+            <div>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-        </ul>
-    </nav>
     <main>
-        <section id="section1">
-            <h2>Section 1</h2>
-            <p>This is Section 1.</p>
+        <section class="hero" aria-labelledby="hero-title">
+            <h1>Welcome to My Web Page</h1>
         </section>
-        <section id="section2">
-            <h2>Section 2</h2>
-            <p>This is Section 2.</p>
-        </section>
+        <div class="container">
+            <article class="column">
+                <h2>Welcome to Our Website</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc at cursus pellentesque,
+                    nisl eros pellentesque quam, a faucibus nisl nunc id nisl.</p>
+                <img src="https://source.unsplash.com/random/300x200" alt="Featured Image">
+                <h3>Explore Our Website</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Contact Information</a></li>
+                </ul>
+            </article>
+            <article class="column">
+                <h2>Latest News</h2>
+                <ul>
+                    <li><a href="#news1">News Article 1</a></li>
+                    <li><a href="#news2">News Article 2</a></li>
+                    <li><a href="#news3">News Article 3</a></li>
+                </ul>
+                <div>
+                    <h3>News Article 1</h3>
+                    <p>This is a brief summary of the first news article.</p>
+                </div>
+                <div>
+                    <h3>News Article 2</h3>
+                    <p>This is a brief summary of the second news article.</p>
+                </div>
+                <div>
+                    <h3>News Article 3</h3>
+                    <p>This is a brief summary of the third news article.</p>
+                </div>
+            </article>
+        </div>
     </main>
     <footer>
         <p>Copyright 2024</p>
     </footer>
 </body>
-</html>
 
+</html>

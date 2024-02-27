@@ -1,31 +1,119 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>My Web Page</title>
+    <title>Non-Semantic HTML Demo: Screen Reading Non-Semantic Markup</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .menu {
+            background-color: #f8f9fa;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu div {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .hero {
+            background-image: url('https://source.unsplash.com/random');
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
+
 <body>
-    <div>
+    <div class="menu">
+        <img src="https://source.unsplash.com/random/50x50" alt="Logo" class="logo">
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="hero">
         <h1>Welcome to My Web Page</h1>
     </div>
-    <div>
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-        </ul>
-    </div>
-    <div>
-        <div id="section1">
-            <h2>Section 1</h2>
-            <p>This is Section 1.</p>
+    <div class="container">
+        <div class="column">
+            <h2>Welcome to Our Website</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc at cursus pellentesque, nisl
+                eros pellentesque quam, a faucibus nisl nunc id nisl.</p>
+            <img src="https://source.unsplash.com/random/300x200" alt="Featured Image">
+            <h3>Explore Our Website</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Contact Information</a></li>
+            </ul>
         </div>
-        <div id="section2">
-            <h2>Section 2</h2>
-            <p>This is Section 2.</p>
+        <div class="column">
+            <div>
+                <h2>Dummy Content 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc at cursus pellentesque,
+                    nisl eros pellentesque quam, a faucibus nisl nunc id nisl.</p>
+            </div>
+            <div>
+                <h2>Dummy Content 2</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed velit
+                    nisi, lacinia nec lacus at, tincidunt cursus nisl. Mauris sit amet nisl id nisl lacinia bibendum.
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Latest News</h2>
+            <ul>
+                <li><a href="#news1">News Article 1</a></li>
+                <li><a href="#news2">News Article 2</a></li>
+                <li><a href="#news3">News Article 3</a></li>
+            </ul>
+            <div id="news1">
+                <h3>News Article 1</h3>
+                <p>This is a brief summary of the first news article.</p>
+            </div>
+            <div id="news2">
+                <h3>News Article 2</h3>
+                <p>This is a brief summary of the second news article.</p>
+            </div>
+            <div id="news3">
+                <h3>News Article 3</h3>
+                <p>This is a brief summary of the third news article.</p>
+            </div>
         </div>
     </div>
     <div>
         <p>Copyright 2024</p>
     </div>
 </body>
-</html>
 
+</html>
